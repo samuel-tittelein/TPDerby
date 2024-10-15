@@ -13,7 +13,6 @@ public class CreationBD {
         }
     }
 
-
     // Méthode statique pour créer une base de données
     public static void creerBD(String nomBD) {
         Connection conn = seConnecter(nomBD);
@@ -82,18 +81,19 @@ public class CreationBD {
         creerTable(nomBD, creationTableClient, client);
 
         String proprietaire = "Proprietaire";
-        String creationTableProprietaire =
-                "CREATE TABLE " + proprietaire + " (" +
-                "id INT PRIMARY KEY, " +
-                "nom VARCHAR(50), " +
-                "prenom VARCHAR(50))";
+        String creationTableProprietaire = "CREATE TABLE " + proprietaire + " (" +
+                                           "id INT PRIMARY KEY, " +
+                                           "nom VARCHAR(50), " +
+                                           "prenom VARCHAR(50))";
         creerTable(nomBD, creationTableProprietaire, proprietaire);
 
         String article = "Article";
         String creationTableArticle = "CREATE TABLE " + article + " (" +
                                       "id INT PRIMARY KEY, " +
                                       "nomA VARCHAR(50), " +
-                                      "cout DECIMAL(10, 2))";
+                                      "cout DECIMAL(10, 2)," +
+                                      "idProprietaire INT," +
+                                      "FOREIGN KEY (idProprietaire) REFERENCES Proprietaire(id)) ";
         creerTable(nomBD, creationTableArticle, article);
 
         String pret = "Pret";
@@ -101,8 +101,7 @@ public class CreationBD {
                                    "idClient INT, " +
                                    "idArticle INT, " +
                                    "nb_jours INT, " +
-                                   "FOREIGN KEY (idClient) REFERENCES Client(id), "
-                                   +
+                                   "FOREIGN KEY (idClient) REFERENCES Client(id), " +
                                    "FOREIGN KEY (idArticle) REFERENCES Article(id))";
         creerTable(nomBD, creationTablePret, pret);
 
