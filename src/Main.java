@@ -3,7 +3,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        CreationBD.creerBD("db/BASEDEBZ");
+        CreationBD.main(new String[] { "bd_prets"});
     }
 
 }
