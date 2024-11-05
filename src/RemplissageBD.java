@@ -39,7 +39,8 @@ public class RemplissageBD {
                 {"1", "'TITTELEIN'", "'Samuel'", "18"},
                 {"2", "'ROUSSEAU'", "'Rayanne'", "19"},
                 {"3", "'STALINE'", "'Joseph'", "140" },
-                {"4", "'KHALIFA'", "'Mia'", "32"}
+                {"4", "'KHALIFA'", "'Mia'", "32"},
+                {"5", "'PETIT'", "'Gregory'", "5"}
         };
         String[][] articles = {
                 {"1", "'Article 1'", "100", "1"},
