@@ -102,7 +102,8 @@ public class CreationBD {
                                    "idArticle INT, " +
                                    "nb_jours INT, " +
                                    "FOREIGN KEY (idClient) REFERENCES Client(id), " +
-                                   "FOREIGN KEY (idArticle) REFERENCES Article(id))";
+                                   "FOREIGN KEY (idArticle) REFERENCES Article(id), " +
+                                   "PRIMARY KEY (idClient, idArticle))";
         creerTable(nomBD, creationTablePret, pret);
 
     }

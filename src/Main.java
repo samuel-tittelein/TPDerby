@@ -3,8 +3,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        CreationBD.main(new String[] { "bd_prets"});
-        RemplissageBD.main(new String[] { "bd_prets", "Client", "1", "John Doe", "John", "30" });
+
+        CreationBD.main(new String[] { "bd_prets" });
+        RemplissageBD.main(
+                new String[] { "bd_prets", "Client", "1", "John Doe", "John",
+                        "30" });
     }
 
 }

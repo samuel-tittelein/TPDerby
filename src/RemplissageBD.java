@@ -50,7 +50,7 @@ public class RemplissageBD {
         String[][] proprietaire = {
                 {"1", "'SINS'", "'Johnny'"},
                 {"2", "'ELFIE'", "'Eva'"},
-                {"3", "'FOW'", "'Sweetie'"},
+                {"3", "'FOX'", "'Sweetie'"},
                 {"4", "'FORGER'", "'Anya'"}
         };
         String[][] prets = {
